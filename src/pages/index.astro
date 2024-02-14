@@ -3,6 +3,10 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import shows from '../data/shows.json';
+
+// Sort the shows by date
+shows.sort((a, b) => new Date(a.date) - new Date(b.date));
 ---
 
 <!doctype html>
@@ -14,9 +18,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<h1>Upcoming Shows</h1>
-			<p>
-				Coming soon...
-			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Venue</th>
+						<th>Location</th>
+						<th>Link</th>
+					</tr>
+				</thead>
+				<tbody>
+					{shows.map(show => (
+						show.displayShow ? (
+						<tr>
+							<td>{show.date}</td>
+							<td>{show.time}</td>
+							<td>{show.venue}</td>
+							<td>{show.location}</td>
+							<td><a href={show.link}>Tickets</a></td>
+						</tr>
+						) : null
+					))}
+				</tbody>
+			</table>
 		</main>
 		<Footer />
 	</body>

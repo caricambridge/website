@@ -5,6 +5,8 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import videos from '../data/videos.json';
+
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -94,6 +96,9 @@ const posts = (await getCollection('blog')).sort(
 				<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cambridgemusic/video/7326463741300739374" data-video-id="7326463741300739374" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@cambridgemusic" href="https://www.tiktok.com/@cambridgemusic?refer=embed">@cambridgemusic</a> <a title="timeaftertime" target="_blank" href="https://www.tiktok.com/tag/timeaftertime?refer=embed">#timeaftertime</a>. <a title="cyndilauper" target="_blank" href="https://www.tiktok.com/tag/cyndilauper?refer=embed">#cyndilauper</a> <a target="_blank" title="♬ original sound - Cari Cambridge" href="https://www.tiktok.com/music/original-sound-7326464189399042862?refer=embed">♬ original sound - Cari Cambridge</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 			</section>
 		</main>
+		<table>
+			
+		</table>
 		<Footer />
 	</body>
 </html>

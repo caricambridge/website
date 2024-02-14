@@ -1,7 +1,7 @@
 [
-  { "displayShow": true, "date": "2024-02-16", "time": "Doors @ 7:00pm, Show @ 8:00pm", "venue": "Fountain Square Brew", "location": "Indy", "link": "https://fountainsquare.beer/event/acoustic-social-at-fsb/" },
-  { "displayShow": true, "date": "2022-01-05", "time": "TBD", "venue": "The Venue", "location": "The City", "link": "test" },
+  { "displayShow": true, "date": "2024-02-16", "time": "Doors @ 7:00pm <br> Show @ 8:00pm", "venue": "Fountain Square Brew", "location": "Indy", "link": "https://fountainsquare.beer/event/acoustic-social-at-fsb/" },
+  { "displayShow": true, "date": "2023-12-31", "time": "TBD", "venue": "The Venue", "location": "The City", "link": "test" },
   { "displayShow": false, "date": "2022-01-02", "time": "TBD", "venue": "The Venue", "location": "The City", "link": "test" },
-  { "displayShow": true, "date": "2022-01-03", "time": "11:00pm", "venue": "The Venue", "location": "The City", "link": "test" },
-  { "date": "2022-01-04", "time": "TBD", "venue": "The Venue", "location": "The City", "link": "test" }
+  { "displayShow": false, "date": "2022-01-03", "time": "11:00pm", "venue": "The Venue", "location": "The City", "link": "test" },
+  { "displayShow": true, "date": "2022-01-04", "time": "TBD", "venue": "The Venue", "location": "The City", "link": "test" }
 ]

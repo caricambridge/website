@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import shows from '../data/shows.json';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import UpcomingShows from '../components/UpcomingShows.astro';
+import MediaSpotlight from '../components/MediaSpotlight.astro';
 
 // Sort the shows by date
 shows.sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -20,6 +21,7 @@ shows.sort((a, b) => new Date(a.date) - new Date(b.date));
 		<Header />
 		<UpcomingShows shows={shows} />
 		<NewsletterSignup />
+		<MediaSpotlight />
 		<Footer />
 	</body>
 </html>

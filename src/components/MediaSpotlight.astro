@@ -1,0 +1,15 @@
+---
+import videos from '../data/videos.json';
+---
+<main>
+<h2>Clips</h2>
+
+{videos.map(v => (
+  <blockquote class="tiktok-embed" cite={v.citation} data-video-id={v.videoId} style="max-width: 605px;min-width: 325px;">
+    <section>
+      <a target="_blank" title={v.title} href={v.link}>{v.title}</a>
+    </section>
+  </blockquote>
+))}
+<script async src="https://www.tiktok.com/embed.js"></script>
+</main>

@@ -1,0 +1,38 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import '../styles/global.css';
+
+interface Props {
+	shows: object[];
+}
+
+const { shows } = Astro.props;
+---
+<main>
+  <h1>Upcoming Shows</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Venue</th>
+        <th>Location</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {shows.map(show => (
+        show.displayShow ? (
+        <tr>
+          <td>{show.date}</td>
+          <td>{show.time}</td>
+          <td>{show.venue}</td>
+          <td>{show.location}</td>
+          <td><a href={show.link}>Info</a></td>
+        </tr>
+        ) : null
+      ))}
+    </tbody>
+  </table>
+</main>
